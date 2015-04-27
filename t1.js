@@ -18,3 +18,20 @@
     fn();
   };
 })();
+
+window.onload = function() {
+  test('A test.', function() {
+    assert(true, 'First assertion completed.');
+    assert(true, 'Second assertion completed.');
+    assert(true, 'Third assertion completed.');
+  });
+  test('Another test.', function() {
+    assert(true, 'First assertion completed.');
+    assert(false, 'Second assertion failed.');
+    assert(true, 'Third assertion completed.');
+  });
+  test('A third test.', function() {
+    assert(null, 'Fail.');
+    assert(5, 'pass');
+  });
+};
